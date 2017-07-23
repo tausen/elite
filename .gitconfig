@@ -1,0 +1,24 @@
+[credential]
+	helper = cache --timeout=1200
+[push]
+	default = simple
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	df = diff
+	dfc = diff --cached
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
+	type = cat-file -t
+	dump = cat-file -p
+	l = log --decorate --graph
+	ll = log --all --decorate --graph
+	llp = log --all --decorate --graph -p --submodule=log
+	lls = log --all --decorate --graph --pretty=oneline --abbrev-commit
+	lla = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	su = submodule update --init --recursive
+	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+[core]
+	pager = "less -R -S"
+	editor = elite
