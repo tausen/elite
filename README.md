@@ -1,3 +1,5 @@
+Requires installed emacs, tested with 24.5
+
 To install:
 
 	mkdir ~/.elite
